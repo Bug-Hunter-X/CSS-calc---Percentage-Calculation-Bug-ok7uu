@@ -1,0 +1,17 @@
+To correctly subtract a percentage from another percentage within `calc()`, use absolute units or a different approach. For instance, if you intend to make an element 10% narrower than 50% of its container, you would need to calculate the absolute value beforehand and then use that value within calc(). Alternatively, consider using viewport units (vw, vh) or other appropriate relative units for a more predictable outcome.  Below is an example solution:
+
+```css
+/*Incorrect Implementation*/
+.element {
+  width: calc(50% - 10%);
+}
+
+/*Correct Implementation*/
+.element {
+  width: calc(50% - 10vw);
+}
+/*Another correct implementation, more complex, but works if parent is always the viewport*/
+.element {
+  width: calc(50% - (10% * 100vw));
+}
+```
