@@ -1,0 +1,1 @@
+This repository demonstrates a common error when using the `calc()` function in CSS with percentages. The `bug.css` file shows the incorrect implementation, while `bugSolution.css` provides the correct approach.  The issue arises from misunderstanding how percentages are resolved within the `calc()` function.
